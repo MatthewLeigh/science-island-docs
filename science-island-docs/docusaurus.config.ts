@@ -34,7 +34,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/MatthewLeigh/science-island-docs',
+            'https://github.com/MatthewLeigh/science-island-docs/tree/main/science-island-docs',
         },
         blog: false,
         theme: {
