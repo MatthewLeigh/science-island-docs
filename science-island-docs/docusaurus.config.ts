@@ -2,102 +2,123 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
+const Discord = 'https://discord.com/channels/1350984587148525579/1350984587664294005'
+const GitHub = 'https://github.com/EducationNetworkGroup'
+const EditUrl = 'https://github.com/MatthewLeigh/science-island-docs/tree/main/science-island-docs'
+const Website = 'https://scienceisland.com/#/'
+const Game = 'https://scienceisland.com/main.php#/'
+const TeachersPortal = '/' /* Pending */
+
 const config: Config = {
-  title: 'Science Island',
-  tagline: 'Cool, Fun & Engaging',
-  favicon: 'img/favicon.ico',
+    title: 'Science Island',
+    tagline: 'Cool, Fun & Engaging',
+    favicon: 'img/favicon.ico',
+    url: Website,
+    baseUrl: '/',
 
-  // Set the production url of your site here
-  url: 'https://scienceisland.com/#/',
+    organizationName: 'Education Network Group',
+    projectName: 'Science Island',
+    onBrokenLinks: 'throw',
+    onBrokenMarkdownLinks: 'warn',
 
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
-  baseUrl: '/',
+    i18n: {
+        defaultLocale: 'en',
+        locales: ['en'],
+    },
 
-  organizationName: 'Education Network Group',
-  projectName: 'Science Island',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-
-  i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
-  },
-
-  presets: [
-    [
-      'classic',
-      {
-        docs: {
-          routeBasePath: '/',
-          sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/MatthewLeigh/science-island-docs/tree/main/science-island-docs',
-        },
-        blog: false,
-        theme: {
-          customCss: './src/css/custom.css',
-        },
-      } satisfies Preset.Options,
+    presets: [
+        [
+            'classic',
+            {
+                docs: {
+                    routeBasePath: '/',
+                    sidebarPath: './sidebars.ts',
+                    editUrl: EditUrl,
+                },
+                blog: false,
+                theme: {
+                    customCss: './src/css/custom.css',
+                },
+            } satisfies Preset.Options,
+        ],
     ],
-  ],
 
-  themeConfig: {
-    image: 'img/science-island-social-card.png',
-    navbar: {
-      title: 'Science Island Docs',
-      logo: {
-        alt: 'Science Island Logo',
-        src: 'img/logo.png',
-      },
-      items: [
-        {
-          href: 'https://github.com/EducationNetworkGroup',
-          label: 'GitHub',
-          position: 'right',
-        },
-      ],
-    },
-    footer: {
-      style: 'dark',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Docs',
-              to: '/',
+    themeConfig: {
+        image: 'img/science-island-social-card.png',
+
+        navbar: {
+            title: 'Science Island Docs',
+            logo: {
+                alt: 'Science Island Logo',
+                src: 'img/logo.png',
             },
-          ],
+            items: [
+                {
+                    label: 'Discord',
+                    href: Discord,
+                    position: 'right',
+                },
+                {
+                    label: 'GitHub',
+                    href: GitHub,
+                    position: 'right',
+                },
+            ],
         },
-        {
-          title: 'Community',
-          items: [
-            {
-              label: 'Discord',
-              href: 'https://discord.com/channels/1350984587148525579/1350984587664294005',
-            },
-          ],
+
+        footer: {
+            style: 'dark',
+            links: [
+                {
+                    title: 'Docs',
+                    items: [
+                        {
+                            label: 'Docs',
+                            to: '/',
+                        },
+                    ],
+                },
+                {
+                    title: 'Community',
+                    items: [
+                        {
+                            label: 'Discord',
+                            href: Discord,
+                        },
+                        {
+                            label: 'GitHub',
+                            href: GitHub,
+                        },
+                    ],
+                },
+                {
+                    title: 'Deployed',
+                    items: [
+
+                        {
+                            label: 'Website',
+                            href: Website,
+                        },
+                        {
+                            label: 'Game',
+                            href: Game,
+                        },
+                        {
+                            label: 'Teacher\'s Portal (Pending)',
+                            href: TeachersPortal,
+                        }
+                    ],
+                },
+            ],
+            copyright: `Copyright © ${new Date().getFullYear()} Education Network Group.`,
         },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/EducationNetworkGroup',
-            },
-          ],
+
+        prism: {
+            theme: prismThemes.github,
+            darkTheme: prismThemes.dracula,
         },
-      ],
-      copyright: `Copyright © ${new Date().getFullYear()} Education Network Group.`,
-    },
-    prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
-    },
-  } satisfies Preset.ThemeConfig,
+
+    } satisfies Preset.ThemeConfig,
 };
 
 export default config;
