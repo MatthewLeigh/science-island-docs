@@ -13,11 +13,12 @@ const config: Config = {
     title: 'Science Island',
     tagline: 'Cool, Fun & Engaging',
     favicon: 'img/favicon.ico',
-    url: Website,
-    baseUrl: '/',
+    url: 'https:://MatthewLeigh.github.io',
+    baseUrl: '/science-island-docs',
 
-    organizationName: 'Education Network Group',
-    projectName: 'Science Island',
+    organizationName: 'MatthewLeigh',
+    projectName: 'science-island-docs',
+    trailingSlash: false,
     onBrokenLinks: 'throw',
     onBrokenMarkdownLinks: 'warn',
 
