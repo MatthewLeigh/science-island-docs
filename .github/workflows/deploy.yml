@@ -32,7 +32,7 @@ jobs:
           git config --global user.email "$(git log -1 --pretty=format:'%ae')"
 
       - name: Deploy to GitHub Pages
-        working-directory: science-island-docs
-        run: |
-          npm install -g gh-pages
-          gh-pages -d build
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./science-island-docs/build
