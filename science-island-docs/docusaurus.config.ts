@@ -9,6 +9,9 @@ const EditUrl = 'https://github.com/MatthewLeigh/science-island-docs/tree/main/s
 const Website = 'https://scienceisland.com/#/'
 const Game = 'https://scienceisland.com/main.php#/'
 const TeachersPortal = '/' /* Pending */
+const CurriculumMapper = '/' /* Pending */
+const AWS = '/' /* Pending */
+const KeyCloak = '/' /* Pending */
 
 const config: Config = {
     title: 'Science Island',
@@ -45,6 +48,7 @@ const config: Config = {
                     routeBasePath: 'projects',
                     showReadingTime: false,
                     showLastUpdateTime: true,
+                    showLastUpdateAuthor: true,
                     editUrl: EditUrl,
                     blogTitle: 'Student Projects',
                     blogDescription: 'Overview of work completed on Science Island by student teams.',
@@ -112,7 +116,7 @@ const config: Config = {
                     ],
                 },
                 {
-                    title: 'Community',
+                    title: 'Tools & Resources',
                     items: [
                         {
                             label: 'Discord',
@@ -121,6 +125,14 @@ const config: Config = {
                         {
                             label: 'GitHub',
                             href: GitHubEnterprise,
+                        },
+                        {
+                            label: 'AWS',
+                            href: AWS,
+                        },
+                        {
+                            label: 'KeyCloak',
+                            href: KeyCloak,
                         },
                     ],
                 },
@@ -137,9 +149,13 @@ const config: Config = {
                             href: Game,
                         },
                         {
-                            label: 'Teacher\'s Portal (Pending)',
+                            label: 'Teacher\'s Portal',
                             href: TeachersPortal,
-                        }
+                        },
+                        {
+                            label: 'Curriculum Mapper',
+                            href: CurriculumMapper,
+                        },
                     ],
                 },
             ],
