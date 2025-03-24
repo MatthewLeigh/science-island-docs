@@ -47,6 +47,11 @@ const config: Config = {
     themeConfig: {
         image: 'img/science-island-social-card.png',
 
+        colorMode: {
+            defaultMode: 'dark',
+            respectPrefersColorScheme: false
+        },
+
         navbar: {
             title: 'Science Island Docs',
             logo: {
