@@ -9,9 +9,9 @@
     --ifm-color-primary-lightest: #ffb84d;
     --ifm-code-font-size: 95%;
     --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-  }
+}
 
-  [data-theme='dark'] {
+[data-theme='dark'] {
     --ifm-color-primary: #ff7f00;
     --ifm-color-primary-dark: #e67000;
     --ifm-color-primary-darker: #cc6400;
@@ -20,4 +20,8 @@
     --ifm-color-primary-lighter: #ffa233;
     --ifm-color-primary-lightest: #ffb84d;
     --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
-  }
+}
+
+* {
+    caret-color: transparent;
+}
