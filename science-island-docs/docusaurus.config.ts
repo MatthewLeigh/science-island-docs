@@ -3,7 +3,8 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
 const Discord = 'https://discord.com/channels/1350984587148525579/1350984587664294005'
-const GitHub = 'https://github.com/EducationNetworkGroup'
+const GitHubEnterprise = 'https://github.com/EducationNetworkGroup'
+const GitHubRepo = 'https://matthewleigh.github.io'
 const EditUrl = 'https://github.com/MatthewLeigh/science-island-docs/tree/main/science-island-docs'
 const Website = 'https://scienceisland.com/#/'
 const Game = 'https://scienceisland.com/main.php#/'
@@ -13,7 +14,8 @@ const config: Config = {
     title: 'Science Island',
     tagline: 'Cool, Fun & Engaging',
     favicon: 'img/favicon.ico',
-    url: 'https://matthewleigh.github.io',
+
+    url: GitHubRepo,
     baseUrl: '/science-island-docs/',
     organizationName: 'MatthewLeigh',
     projectName: 'science-island-docs',
@@ -34,9 +36,20 @@ const config: Config = {
                 docs: {
                     routeBasePath: '/',
                     sidebarPath: './sidebars.ts',
+                    showLastUpdateTime: true,
+                    showLastUpdateAuthor: true,
                     editUrl: EditUrl,
                 },
-                blog: false,
+                blog: {
+                    path: 'projects',
+                    routeBasePath: 'projects',
+                    showReadingTime: false,
+                    showLastUpdateTime: true,
+                    editUrl: EditUrl,
+                    blogTitle: 'Student Projects',
+                    blogDescription: 'Overview of work completed on Science Island by student teams.',
+                    blogSidebarCount: 'ALL',
+                },
                 theme: {
                     customCss: './src/css/custom.css',
                 },
@@ -53,12 +66,22 @@ const config: Config = {
         },
 
         navbar: {
-            title: 'Science Island Docs',
+            title: 'Science Island',
             logo: {
                 alt: 'Science Island Logo',
                 src: 'img/logo.png',
             },
             items: [
+                {
+                    label: 'Docs',
+                    to: '/',
+                    position: 'left',
+                },
+                {
+                    label: 'Projects',
+                    to: '/projects',
+                    position: 'left',
+                },
                 {
                     label: 'Discord',
                     href: Discord,
@@ -66,7 +89,7 @@ const config: Config = {
                 },
                 {
                     label: 'GitHub',
-                    href: GitHub,
+                    href: GitHubEnterprise,
                     position: 'right',
                 },
             ],
@@ -76,12 +99,16 @@ const config: Config = {
             style: 'dark',
             links: [
                 {
-                    title: 'Docs',
+                    title: 'Site Map',
                     items: [
                         {
                             label: 'Docs',
                             to: '/',
                         },
+                        {
+                            label: 'Projects',
+                            to: '/projects',
+                        }
                     ],
                 },
                 {
@@ -93,7 +120,7 @@ const config: Config = {
                         },
                         {
                             label: 'GitHub',
-                            href: GitHub,
+                            href: GitHubEnterprise,
                         },
                     ],
                 },
