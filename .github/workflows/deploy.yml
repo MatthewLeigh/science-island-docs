@@ -22,14 +22,9 @@ jobs:
         working-directory: science-island-docs
         run: npm install
 
-      - name: Build Docusaurus site
+      - name: Build site
         working-directory: science-island-docs
         run: npm run build
-
-      - name: Configure Git Identity
-        run: |
-          git config --global user.name "$(git log -1 --pretty=format:'%an')"
-          git config --global user.email "$(git log -1 --pretty=format:'%ae')"
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
