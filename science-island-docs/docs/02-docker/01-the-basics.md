@@ -19,8 +19,126 @@ If you need to install it, the easiest way to the go to the (Docker Website)[htt
 You can test that everything is working correctly by running the following command.
 
 ```bash
-docker run hello-world
+$ docker run hello-world
 ```
 
-## Some Basic Commands
+## Terminology
+
+The following are some key concepts for working with Docker.
+
+| Term         | Definition                                                                                     |
+|--------------|-------------------------------------------------------------------------------------------------|
+| Image        | A lightweight, standalone, and executable software package that includes everything needed to run a piece of software, including the code, runtime, libraries, and dependencies. |
+| Container    | A runtime instance of a Docker image. It is a lightweight, standalone, and secure environment for running applications. |
+| Dockerfile   | A text document that contains all the commands to assemble a Docker image.                      |
+| Registry     | A storage and distribution system for Docker images, such as Docker Hub.                        |
+| Volume       | A mechanism for persisting data generated and used by Docker containers.                        |
+| Network      | A way to allow containers to communicate with each other or with external systems.              |
+
+## Basic Commands
+
+The best introduction to Docker is through an example. IN this case, we will use the `Busybox` image to run through some basic commands.
+
+### Docker pull
+
+To get started, run the `pull` command in the terminal.
+
+```bash
+$ docker pull busybox
+```
+
+### Docker images
+
+The `pull` command fetches the Busybox `image` from the `Docker registry` and saves it to your system. To view all the images on your system, use the `docker images` command.
+
+```bash
+$ docker images
+REPOSITORY              TAG                 IMAGE ID            CREATED             VIRTUAL SIZE
+busybox                 latest              c51f86c28340        4 weeks ago         1.109 MB
+```
+
+### Docker run
+
+Once images are saved to the system, we use the `docker run` command to run them.
+
+```bash
+$ docker run busybox`
+```
+In this case, nothing happens! (At least we don't see anything happen). In the background, the Docker client:
+
+- Found the Busybox image,
+- Loaded the container, and
+- Run a command in the container (We just didn't provide it with a command).
+
+If we try that again, but give it a command this time, we will see it do something.
+
+```bash
+$ docker run busybox echo "cool, fun & engaging"
+cool, fun & engaging
+```
+
+#### Multiple commands
+
+We often want to be able to do more than just give the container a single command to run. We can do this by stringing a few things together in the command line:
+
+- `-i` : The *interactive* flag keep's the container's standard input open, allowing you to interact with it.
+- `-t` : The *TTY* flag allocates a pseudo-terminal, making the container behave like a real terminal sessions.
+- `sh` : Specifies the the *Bounre Shell* should run inside the container, essentially turning it into a simple Unix-based shell.
+
+```bash
+$ docker run -it busybox sh
+/# echo "cool"
+cool
+/# echo "fun"
+fun
+/# echo "engaging"
+engaging
+```
+
+> Type `exit` to finish entering commands.
+
+### Docker ps
+
+The `docker ps` command shows all of your currently running containers.
+
+```bash
+$ docker ps
+```
+
+Currently, there are no running container, so that command will, again, return nothing. Let's try it with the `-a` (all) flag added, so we can see container that have been exited as well.
+
+```bash
+$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND                  CREATED         STATUS                          PORTS     NAMES
+e3e76a2cee84   busybox   "sh"                     2 minutes ago   Exited (0) About a minute ago             stupefied_swartz
+1e71948a071c   busybox   "echo 'cool, fun & e…"   8 minutes ago   Exited (0) 8 minutes ago                  elegant_benz
+```
+
+### Docker rm
+
+Even after they've exited, containers that remain on your system can take up precious memory. It is good practice to delete them when you are don't with them.
+
+To delete individual containers, use the `docker rm <CONTAINER ID>` command on the ID's you identify from `docker ps -a`.
+
+```bash
+$ docker rm e3e76a2cee84
+e3e76a2cee84
+```
+
+This method will echo back the ID's of the container that have been successfully deleted.
+
+#### Docker container prune
+
+Alternatively, you can use `docker container prune` to delete all stopped / exited containers on your system.
+
+```bash
+$ docker container prune
+WARNING! This will remove all stopped containers.
+Are you sure you want to continue? [y/N] y
+Deleted Containers:
+1e71948a071ce3209115c34d75064626ff5c6bab2197be5a42afcbdaf00e0b60
+
+Total reclaimed space: 4.096kB
+```
+
 
