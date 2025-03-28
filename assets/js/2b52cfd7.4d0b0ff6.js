@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkscience_island_docs=self.webpackChunkscience_island_docs||[]).push([[4762],{4082:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/science-island-docs/projects","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Overview of work completed on Science Island by student teams.","blogTitle":"Student Projects"}}')}}]);
