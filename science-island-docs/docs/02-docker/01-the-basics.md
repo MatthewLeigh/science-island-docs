@@ -2,6 +2,6 @@
 sidebar_position: 1
 ---
 
-# Document 1
+# The Basics
 
 blah blah blah
