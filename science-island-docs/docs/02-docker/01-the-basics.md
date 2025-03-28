@@ -55,6 +55,8 @@ To get started, run the `pull` command in the terminal.
 $ docker pull busybox
 ```
 
+This step is optional. If Docker is unable to find an image locally, it will automatically attempt to pull it for the `Docker Registry` if you call `docker run <image-name>` later.
+
 
 ### docker images
 The `pull` command fetches the Busybox `image` from the `Docker registry` and saves it to your system. To view all the images on your system, use the `docker images` command.
@@ -156,3 +158,10 @@ Total reclaimed space: 4.096kB
 ```
 
 
+### docker run --rm
+
+When you set the `--rm` flag after `docker run`, the container is automatically deleted once it is stopped / exited.
+
+```bash
+$ docker run --rm  -it busybox sh
+```

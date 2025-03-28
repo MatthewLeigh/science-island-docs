@@ -1,8 +1,0 @@
-{
-    "label": "Manage Docs",
-    "position": 99,
-    "link": {
-        "type": "generated-index",
-        "description": "Manage documentation on this website."
-    }
-}
