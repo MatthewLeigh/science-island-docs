@@ -15,7 +15,7 @@ Before we do anything else, we need to install Docker locally. You can check if 
 docker --version
 ```
 
-If you need to install it, the easiest way to the go to the (Docker Website)[https://www.docker.com/get-started/], click `Download Docker Desktop`, and select the appropriate download for your OS. Follow the steps it gives you, making sure to create an account when prompted.
+If you need to install it, the easiest way to the go to the [Docker Website](https://www.docker.com/get-started/), click `Download Docker Desktop`, and select the appropriate download for your OS. Follow the steps it gives you, making sure to create an account when prompted.
 
 You can test that everything is working correctly by running the following command.
 
