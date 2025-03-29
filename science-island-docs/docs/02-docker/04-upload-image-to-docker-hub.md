@@ -1,5 +1,4 @@
 ---
----
 sidebar_position: 4
 ---
 
@@ -31,4 +30,4 @@ To publish your Image, use the `docker push` command. The client reads *username
 $ docker push matthewcross97/first-image
 ```
 
-That's it. Refer back to [Deploy Existing Image Locally](./03-deploy-existing-image-locally.md) to get it running anywhere.
+That's it. Refer back to [Deploy Existing Image Locally](03-deploy-custom-image-locally.md) to get it running anywhere.
