@@ -27,7 +27,7 @@ Login Succeeded
 To publish your Image, use the `docker push` command. The client reads *username/image_name*, so make sure you match that format.
 
 ```bash
-$ docker push matthewcross97/first-image
+$ docker push matthewcross97/first-image:v1
 ```
 
 That's it. Refer back to [Deploy Existing Image Locally](02-deploy-existing-image-locally.md) to get it running anywhere.
