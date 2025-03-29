@@ -27,7 +27,7 @@ Here's a quick breakdown of what everything does:
 | `-d`             | Runs the container in *detach mode*. This means that is runs in the background, without being tied to the terminal where you run the command. |
 | `-p 8080:8080`   | Maps port 8080 on the host to port 8080 in the container (host:container) |
 | `-p 8081:8081`   | Shows that you can have multiple ports mapped for the container. This is useful for allowing external access to service running inside the container. |
-| `--name hello-world`        | Assigns a customer name to the container (i.e., hello-world). This simplifies container management and later commands, as without it Docker will generate a random name for the container (e.g., wonderful_design) |
+| `--name hello-world`        | Assigns a custom name to the container (i.e., hello-world). This simplifies container management and later commands, as without it Docker will generate a random name for the container (e.g., wonderful_design) |
 | `testcontainers/helloworld` | The name of the Docker image being used. If the image isn't available locally, Docker will attempt to pull it from Docker Hub. |
 
 
@@ -49,6 +49,6 @@ To stop a non-detached container, simply hit `ctrl c` or exit the terminal.
 To stop a detached container, run the `docker stop <name>` command.
 
 ```bash
-$docker stop hello-world
+$ docker stop hello-world
 hello-world
 ```
