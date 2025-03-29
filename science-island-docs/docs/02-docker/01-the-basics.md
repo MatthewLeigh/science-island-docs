@@ -44,7 +44,7 @@ The following are some key concepts for working with Docker.
 
 | Term         | Definition                                                                                     |
 |--------------|-------------------------------------------------------------------------------------------------|
-| Image        | A lightweight, standalone, and executable software package that includes everything needed to run a piece of software, including the code, runtime, libraries, and dependencies. |
+| Image        | A lightweight, standalone, and executable software package that includes everything needed to run a piece of software, including the code, runtime, libraries, and dependencies. It can help to think of an Image as a GitHub Repo for now. |
 | Container    | A runtime instance of a Docker image. It is a lightweight, standalone, and secure environment for running applications. |
 | Dockerfile   | A text document that contains all the commands to assemble a Docker image.                      |
 | Registry     | A storage and distribution system for Docker images, such as Docker Hub.                        |
@@ -143,11 +143,16 @@ e3e76a2cee84   busybox   "sh"                     2 minutes ago   Exited (0) Abo
 
 Even after they've exited, containers that remain on your system can take up precious memory. It is good practice to delete them when you are don't with them.
 
-To delete individual containers, use the `docker rm <CONTAINER ID>` command on the ID's you identify from `docker ps -a`.
+To delete individual containers, use the `docker rm <CONTAINER ID>` or `docker fm <NAMES>` command on the ID's you identify from `docker ps -a`.
 
 ```bash
 $ docker rm e3e76a2cee84
 e3e76a2cee84
+```
+
+```bash
+$ docker rm elegant_benz
+elegant_benz
 ```
 
 This method will echo back the ID's of the container that have been successfully deleted.
