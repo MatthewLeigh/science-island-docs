@@ -2,6 +2,7 @@
 sidebar_position: 2
 ---
 
-# Document 2
+# Static Sites
 
-blah blah blah
+How to run a simple static-website with Docker.
+

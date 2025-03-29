@@ -27,6 +27,16 @@ This message shows that your installation appears to be working correctly.
 ...
 ```
 
+## Getting Started Next Time
+
+When you return to Docker after shutting down your computer, you may get hit with an error like this one.
+
+```bash
+error during connect: Get "http://%2F%2F.%2Fpipe%2FdockerDesktopLinuxEngine/v1.48/containers/json?all=1": open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+```
+
+When that happens, the easiest fix is to simply open the `Docker Desktop` app manually.
+
 
 ## Terminology
 
