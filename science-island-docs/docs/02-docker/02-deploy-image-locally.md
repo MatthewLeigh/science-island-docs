@@ -2,7 +2,7 @@
 sidebar_position: 2
 ---
 
-# Deploy Image Locally
+# Deploy Existing Image Locally
 
 Before learning how to deploy an Image to a server, it is useful to look at how to deploy one within a local Container.
 
