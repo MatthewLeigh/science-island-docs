@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkscience_island_docs=self.webpackChunkscience_island_docs||[]).push([[1903],{1912:s=>{s.exports=JSON.parse('{"blogBasePath":"/science-island-docs/projects","blogTitle":"Student Projects","authorsListPath":"/science-island-docs/projects/authors"}')}}]);
