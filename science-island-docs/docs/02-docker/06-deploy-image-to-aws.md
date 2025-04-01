@@ -1,10 +1,10 @@
 ---
-sidebar_position: 5
+sidebar_position: 6
 ---
 
 # Deploy Image to AWS
 
-**INCOMPLETE DOC. NOT SURE HOW TO DO THIS PROPERLY YET.**
+**INCOMPLETE DOC. NOT SURE HOW TO DO THIS PROPERLY YET...**
 
 This document goes over setting up a single Container in `AWS Elastic Beanstalk (EB)`. For now, the document uses the [AWS Console](https://signin.aws.amazon.com/signin?redirect_uri=https%3A%2F%2Fap-southeast-2.console.aws.amazon.com%2Fconsole%2Fhome%3FhashArgs%3D%2523%26isauthcode%3Dtrue%26nc2%3Dh_ct%26region%3Dap-southeast-2%26src%3Dheader-signin%26state%3DhashArgsFromTB_ap-southeast-2_305d027d876d9639&client_id=arn%3Aaws%3Asignin%3A%3A%3Aconsole%2Fcanvas&forceMobileApp=0&code_challenge=bXoW3ZA_TLE7S9jyRm0Mrz5L7txpyxoWjkAiERknbaU&code_challenge_method=SHA-256)
 

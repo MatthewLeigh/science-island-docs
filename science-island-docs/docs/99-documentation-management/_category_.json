@@ -1,0 +1,8 @@
+{
+    "label": "Documentation",
+    "position": 9,
+    "link": {
+        "type": "generated-index",
+        "description": "Doc Docs (who's there?)"
+    }
+}

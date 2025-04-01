@@ -53,4 +53,3 @@ When you are prompted for your password, paste in the PAT and press enter. (Note
 - Only give the necessary scope to each PAT. Having a 'God Token' with permission to do everything is just asking for problems.
 - Store your PAT securely when you need to save it (e.g., in environment variables, Docker secrets, or password managers).
 - If your PAT becomes compromised, immediately revoke it from the GitHub settings page.
--
