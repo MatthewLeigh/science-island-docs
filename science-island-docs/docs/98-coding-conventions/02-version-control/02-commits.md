@@ -23,12 +23,12 @@ body (optional)
 - build: Affect build components (e.g. CI pipeline, project dependencies)
 - misc: Other changes not covered above
 
-## Subject (required):
+## Subject (required)
 
 - Use lowercase and imperative mood (e.g. "fix login timeout issue")
 - Keep it 50–75 characters max, without ending punctuation
 
-## Body (optional):
+## Body (optional)
 
 - Explain what the change is and why it was made (not how)
 - Wrap text at 75 characters per line
